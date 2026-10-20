@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- WebCraft Brand & Favicon -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Contraception Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8f6f1;
+            --ink: #1a1a2e;
+            --ink-muted: #5a5a72;
+            --cream: #fdfcf8;
+            --teal: #0f7575;
+            --teal-light: #e6f4f4;
+            --teal-mid: #c2e4e4;
+            --rose: #b5294a;
+            --rose-light: #fce8ee;
+            --amber: #c47a15;
+            --amber-light: #fef4e6;
+            --green: #1a7a4a;
+            --green-light: #e6f5ee;
+            --purple: #5b3d8a;
+            --purple-light: #f0eaf8;
+            --border: #e2ded5;
+            --shadow-sm: 0 1px 3px rgba(26,26,46,0.08);
+            --shadow-md: 0 4px 16px rgba(26,26,46,0.10);
+            --shadow-lg: 0 8px 32px rgba(26,26,46,0.12);
+            --r: 10px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--ink);
+            line-height: 1.7;
+            padding: 0 0 80px;
+        }
+
+        /* ---- HEADER ---- */
+        .site-header {
+            background: var(--ink);
+            color: var(--cream);
+            padding: 60px 40px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 280px; height: 280px;
+            border-radius: 50%;
+            background: var(--teal);
+            opacity: 0.12;
+        }
+        .site-header::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: 5%;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            background: var(--rose);
+            opacity: 0.10;
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .header-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--teal-mid);
+            margin-bottom: 14px;
+        }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            line-height: 1.1;
+            font-weight: 400;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .site-header p {
+            color: #a8a8c0;
+            font-size: 1rem;
+            font-weight: 300;
+            max-width: 500px;
+        }
+
+        /* ---- NAV PILLS ---- */
+        .nav-bar {
+            background: var(--cream);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 14px 18px;
+            text-decoration: none;
+            color: var(--ink-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .nav-link:hover { color: var(--teal); border-bottom-color: var(--teal); }
+
+        /* ---- MAIN LAYOUT ---- */
+        .main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section { margin-bottom: 56px; scroll-margin-top: 66px; }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .section-label h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.9rem;
+            font-weight: 400;
+            color: var(--ink);
+        }
+        .section-label .icon-pill {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .icon-pill.teal { background: var(--teal-light); }
+        .icon-pill.rose { background: var(--rose-light); }
+        .icon-pill.amber { background: var(--amber-light); }
+        .icon-pill.green { background: var(--green-light); }
+        .icon-pill.purple { background: var(--purple-light); }
+        .icon-pill.dark { background: #e8e8f0; }
+
+        .section-intro {
+            color: var(--ink-muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            max-width: 700px;
+        }
+
+        /* ---- CARDS ---- */
+        .card {
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+            padding: 28px 30px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 16px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            margin-bottom: 12px;
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card ul {
+            padding-left: 18px;
+            font-size: 0.92rem;
+        }
+        .card ul li { margin-bottom: 6px; color: var(--ink-muted); }
+        .card ul li strong { color: var(--ink); }
+
+        /* Accent borders */
+        .card.accent-teal { border-left: 4px solid var(--teal); }
+        .card.accent-green { border-left: 4px solid var(--green); }
+        .card.accent-rose { border-left: 4px solid var(--rose); }
+        .card.accent-amber { border-left: 4px solid var(--amber); }
+        .card.accent-purple { border-left: 4px solid var(--purple); }
+
+        /* ---- TABLES ---- */
+        .table-shell {
+            border-radius: var(--r);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 16px;
+        }
+        .table-shell table { width: 100%; border-collapse: collapse; min-width: 520px; }
+        .table-overflow { overflow-x: auto; }
+        th {
+            background: var(--ink);
+            color: var(--cream);
+            padding: 14px 18px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            text-align: left;
+        }
+        td {
+            padding: 14px 18px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+            background: var(--cream);
+            vertical-align: top;
+        }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #f5f3ee; }
+
+        /* ---- BADGES ---- */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 9px;
+            border-radius: 99px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .badge.best   { background: var(--green-light);  color: var(--green); }
+        .badge.warn   { background: var(--amber-light);  color: var(--amber); }
+        .badge.stop   { background: var(--rose-light);   color: var(--rose); }
+        .badge.blue   { background: #e8f0fe;              color: #1a56a0; }
+        .badge.purple { background: var(--purple-light); color: var(--purple); }
+
+        /* ---- PEARL / CALLOUT BOXES ---- */
+        .pearl {
+            border-radius: 8px;
+            padding: 16px 20px;
+            font-size: 0.92rem;
+            margin: 20px 0;
+            border-left: 4px solid;
+        }
+        .pearl.teal   { background: var(--teal-light);   border-color: var(--teal);   color: var(--ink); }
+        .pearl.amber  { background: var(--amber-light);  border-color: var(--amber);  color: var(--ink); }
+        .pearl.rose   { background: var(--rose-light);   border-color: var(--rose);   color: var(--ink); }
+        .pearl.green  { background: var(--green-light);  border-color: var(--green);  color: var(--ink); }
+        .pearl strong { display: block; margin-bottom: 4px; }
+        .pearl.teal   strong { color: var(--teal); }
+        .pearl.amber  strong { color: var(--amber); }
+        .pearl.rose   strong { color: var(--rose); }
+        .pearl.green  strong { color: var(--green); }
+
+        /* ---- TIER CARDS (Efficacy) ---- */
+        .tier-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .tier-card {
+            border-radius: var(--r);
+            padding: 22px 20px;
+            border: 1px solid var(--border);
+        }
+        .tier-card .tier-num {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .tier-card h4 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+        .tier-card .rate {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 10px 0 6px;
+        }
+        .tier-card .methods { font-size: 0.85rem; color: var(--ink-muted); }
+        .tier-card.t1 { background: var(--green-light);  border-color: var(--green); }
+        .tier-card.t1 .tier-num { color: var(--green); }
+        .tier-card.t1 .rate { color: var(--green); }
+        .tier-card.t2 { background: var(--teal-light);  border-color: var(--teal); }
+        .tier-card.t2 .tier-num { color: var(--teal); }
+        .tier-card.t2 .rate { color: var(--teal); }
+        .tier-card.t3 { background: var(--amber-light); border-color: var(--amber); }
+        .tier-card.t3 .tier-num { color: var(--amber); }
+        .tier-card.t3 .rate { color: var(--amber); }
+        .tier-card.t4 { background: var(--rose-light);  border-color: var(--rose); }
+        .tier-card.t4 .tier-num { color: var(--rose); }
+        .tier-card.t4 .rate { color: var(--rose); }
+
+        /* ---- SCENARIO TABLE ---- */
+        .scenario-avoid { font-weight: 600; color: var(--rose); font-size: 0.88rem; }
+        .scenario-best  { font-weight: 600; color: var(--green); }
+        .mech-note { font-style: italic; color: var(--ink-muted); font-size: 0.82rem; display: block; margin-top: 4px; }
+
+        /* ---- EMERGENCY ROWS ---- */
+        .ec-1 td:first-child { border-left: 4px solid var(--green); }
+        .ec-2 td:first-child { border-left: 4px solid var(--teal); }
+        .ec-3 td:first-child { border-left: 4px solid var(--amber); }
+        .ec-4 td:first-child { border-left: 4px solid var(--rose); }
+
+        /* ---- CONTRA GRID ---- */
+        .contra-two {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .contra-block {
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+            padding: 22px 24px;
+        }
+        .contra-block h4 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+        .contra-block .method-tags { margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+        .contra-block ul {
+            padding-left: 16px;
+            font-size: 0.88rem;
+        }
+        .contra-block ul li { margin-bottom: 8px; color: var(--ink-muted); }
+        .contra-block ul li strong { color: var(--ink); }
+
+        /* ---- PRINT BUTTON ---- */
+        .fab {
+            position: fixed;
+            bottom: 28px; right: 28px;
+            background: var(--ink);
+            color: var(--cream);
+            border: none;
+            border-radius: 99px;
+            padding: 12px 22px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.2s;
+            z-index: 200;
+        }
+        .fab:hover { background: #000; transform: translateY(-2px); }
+
+        /* ---- DIVIDER ---- */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
+        }
+
+        /* ---- PRINT ---- */
+        @media print {
+            .fab, .nav-bar { display: none; }
+            body { background: white; padding: 0; }
+            .card, .contra-block, .tier-card { box-shadow: none; break-inside: avoid; }
+            .site-header { background: white; color: black; padding: 30px 0 20px; }
+            .header-eyebrow { color: #555; }
+            .site-header p { color: #555; }
+        }
+
+        @media (max-width: 640px) {
+            .site-header { padding: 40px 20px 36px; }
+            .card { padding: 20px; }
+            th, td { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="fab" onclick="window.print()">🖨️ Print Notes</button>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <p class="header-eyebrow">Obstetrics & Gynaecology · High-Yield Review</p>
+        <h1>Clinical Contraception</h1>
+        <p>Mechanisms, protocols, safety criteria, clinical scenarios, and emergency contraception — all in one reference.</p>
+    </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav-bar">
+    <div class="nav-inner">
+        <a href="#efficacy"    class="nav-link">📊 Efficacy Tiers</a>
+        <a href="#larc"        class="nav-link">✨ LARC Methods</a>
+        <a href="#hormonal"    class="nav-link">💊 Hormonal & Barrier</a>
+        <a href="#scenarios"   class="nav-link">🩺 Clinical Scenarios</a>
+        <a href="#safety"      class="nav-link">⛔ Contraindications</a>
+        <a href="#emergency"   class="nav-link">🚨 Emergency</a>
+        <a href="#sterilization" class="nav-link">✂️ Sterilization</a>
+    </div>
+</nav>
+
+<main class="main">
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: EFFICACY -->
+    <!-- ============================================================ -->
+    <section id="efficacy">
+        <div class="section-label">
+            <div class="icon-pill green">📊</div>
+            <h2>Hierarchy of Efficacy</h2>
+        </div>
+        <p class="section-intro">Failure rates reflect <strong>typical use</strong> — real-world conditions including inconsistent or incorrect use.</p>
+
+        <div class="tier-row">
+            <div class="tier-card t1">
+                <div class="tier-num">Tier 1 · LARC &amp; Sterilization</div>
+                <h4>"Fit and Forget" — User Independent</h4>
+                <div class="rate">&lt; 1%</div>
+                <div class="methods">Implant (0.05%), Mirena IUS, Copper IUD, Vasectomy, Tubal Ligation</div>
+            </div>
+            <div class="tier-card t3">
+                <div class="tier-num">Tier 2 · Short-Acting Hormonal</div>
+                <h4>Requires User Adherence</h4>
+                <div class="rate">6 – 9%</div>
+                <div class="methods">DMPA Injection, COCP, POP, Patch, Vaginal Ring</div>
+            </div>
+            <div class="tier-card t4">
+                <div class="tier-num">Tier 3 · Barrier &amp; Behavioral</div>
+                <h4>Event-Dependent · High User Error</h4>
+                <div class="rate">12 – 28%</div>
+                <div class="methods">Male/Female Condoms, Withdrawal, Diaphragm, Spermicides, FAM</div>
+            </div>
+        </div>
+
+        <div class="table-overflow">
+            <div class="table-shell">
+                <table>
+                    <thead><tr>
+                        <th>Tier</th>
+                        <th>Method</th>
+                        <th>Failure Rate (Typical)</th>
+                        <th>Mechanism / Key Notes</th>
+                    </tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge best">Tier 1</span></td>
+                            <td><strong>Implant (Nexplanon/Implanon)</strong></td>
+                            <td><strong>0.05%</strong></td>
+                            <td>Subdermal rod. Inhibits ovulation + thickens cervical mucus. Duration: 3 years.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge best">Tier 1</span></td>
+                            <td><strong>Levonorgestrel IUS (Mirena)</strong></td>
+                            <td><strong>&lt; 1%</strong></td>
+                            <td>Thins endometrium, thickens cervical mucus. 3–8 year duration.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge best">Tier 1</span></td>
+                            <td><strong>Copper IUD</strong></td>
+                            <td><strong>&lt; 1%</strong></td>
+                            <td>Cu²⁺ ions: spermicidal inflammation. 10–12 year duration. Hormone-free.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge best">Tier 1</span></td>
+                            <td><strong>Vasectomy</strong></td>
+                            <td><strong>&lt; 1%</strong></td>
+                            <td>More effective than tubal ligation. Confirm azoospermia at 3 months (20 ejaculations).</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge best">Tier 1</span></td>
+                            <td><strong>Tubal Ligation (Salpingectomy)</strong></td>
+                            <td><strong>&lt; 1%</strong></td>
+                            <td>Salpingectomy preferred — also reduces ovarian cancer risk.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge warn">Tier 2</span></td>
+                            <td><strong>DMPA Injection (Depo-Provera)</strong></td>
+                            <td><strong>6%</strong></td>
+                            <td>Every 3 months. Weight gain (proven). Bone density loss (reversible). Delayed fertility return (up to 9–12 months).</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge warn">Tier 2</span></td>
+                            <td><strong>Combined Oral Contraceptive Pill</strong></td>
+                            <td><strong>7–9%</strong></td>
+                            <td>Suppresses ovulation. Daily adherence required. Multiple non-contraceptive benefits.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge warn">Tier 2</span></td>
+                            <td><strong>Patch / Vaginal Ring</strong></td>
+                            <td><strong>7–9%</strong></td>
+                            <td>Same estrogen + progestin combination as COCP. Weekly (patch) or monthly (ring) use.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge stop">Tier 3</span></td>
+                            <td><strong>Male Condom</strong></td>
+                            <td><strong>18%</strong></td>
+                            <td><strong>ONLY method protecting against STIs/HIV.</strong> Dual protection counselling essential.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge stop">Tier 3</span></td>
+                            <td><strong>Withdrawal / FAM / Spermicides</strong></td>
+                            <td><strong>20–28%</strong></td>
+                            <td>Highly user-dependent. Spermicides used with diaphragm; leave diaphragm in 6 hrs post-coitus.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: LARC -->
+    <!-- ============================================================ -->
+    <section id="larc">
+        <div class="section-label">
+            <div class="icon-pill teal">✨</div>
+            <h2>Long-Acting Reversible Contraception</h2>
+        </div>
+        <p class="section-intro">Gold standard for reversible contraception. User-independent, highly effective, and safe for most populations including nulliparous women.</p>
+
+        <div class="card-grid">
+            <div class="card accent-teal">
+                <h3>⚡ Copper IUD <span class="badge blue">Non-Hormonal</span></h3>
+                <ul>
+                    <li><strong>Mechanism:</strong> Cu²⁺ ions → spermicidal inflammatory reaction in endometrium. Primarily prevents fertilization.</li>
+                    <li><strong>Duration:</strong> 10–12 years.</li>
+                    <li><strong>Advantage:</strong> Hormone-free; ideal for women who cannot use hormones. Also the <em>most effective emergency contraceptive</em>.</li>
+                    <li><strong>Downside:</strong> Worsens menorrhagia and dysmenorrhea — avoid in women with heavy/painful periods.</li>
+                    <li><strong>Special:</strong> Avoid in Wilson's Disease (copper accumulation risk).</li>
+                </ul>
+            </div>
+
+            <div class="card accent-green">
+                <h3>🩸 Levonorgestrel IUS (Mirena) <span class="badge blue">Progestin</span></h3>
+                <ul>
+                    <li><strong>Mechanism:</strong> Thins endometrium + thickens cervical mucus → reduces sperm penetration.</li>
+                    <li><strong>Duration:</strong> 3–8 years (device-dependent).</li>
+                    <li><strong>Advantage:</strong> Reduces menstrual blood loss (amenorrhoea in ~50% by year 2). Treats endometriosis pain and menorrhagia.</li>
+                    <li><strong>Downside:</strong> Irregular/unpredictable spotting in first 3–6 months; counsel patients proactively.</li>
+                    <li><strong>Choice for:</strong> Menorrhagia, dysmenorrhoea, endometriosis, anaemia from heavy periods.</li>
+                </ul>
+            </div>
+
+            <div class="card accent-purple">
+                <h3>💪 Subdermal Implant (Nexplanon)</h3>
+                <ul>
+                    <li><strong>Mechanism:</strong> Sustained-release etonogestrel → inhibits ovulation + thickens cervical mucus.</li>
+                    <li><strong>Duration:</strong> 3 years.</li>
+                    <li><strong>Efficacy:</strong> <strong>0.05%</strong> — the single most effective reversible method.</li>
+                    <li><strong>Placement:</strong> Subdermally in non-dominant upper arm. Requires trained inserter.</li>
+                    <li><strong>Main side effect:</strong> Unpredictable, irregular bleeding patterns. Counsel before insertion.</li>
+                </ul>
+                <div class="pearl teal" style="margin-top: 14px; margin-bottom: 0;">
+                    <strong>🏆 Highest Efficacy of All Reversible Methods</strong>
+                    0.05% failure rate. If a patient needs maximum protection and doesn't want a uterine device, this is the answer.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: HORMONAL & BARRIER -->
+    <!-- ============================================================ -->
+    <section id="hormonal">
+        <div class="section-label">
+            <div class="icon-pill amber">💊</div>
+            <h2>Hormonal &amp; Barrier Methods</h2>
+        </div>
+
+        <div class="card-grid">
+            <div class="card accent-teal">
+                <h3>💊 Combined Oral Contraceptive Pill (COCP)</h3>
+                <ul>
+                    <li><strong>Active Agents:</strong> Estrogen (Ethinylestradiol) + Progestin.</li>
+                    <li><strong>Primary Mechanism:</strong> Reliably suppresses ovulation via negative feedback on HPO axis.</li>
+                    <li><strong>Non-contraceptive Benefits:</strong>
+                        <ul>
+                            <li>Treats acne &amp; hirsutism (especially Diane-35 / Cyproterone Acetate — raises SHBG, lowers free testosterone)</li>
+                            <li>Regulates cycle; treats PMDD, endometriosis, dysmenorrhoea</li>
+                            <li>Reduces risk of ovarian and endometrial cancer</li>
+                        </ul>
+                    </li>
+                    <li><strong>Myth Busted:</strong> NOT associated with clinically significant weight gain.</li>
+                    <li><strong>Rapid fertility return</strong> after stopping — preferred in newly married/nulliparous women.</li>
+                </ul>
+            </div>
+
+            <div class="card accent-amber">
+                <h3>💉 DMPA Injection (Depo-Provera)</h3>
+                <ul>
+                    <li><strong>Frequency:</strong> IM or SC injection every 12 weeks (3 months).</li>
+                    <li><strong>Side Effects (proven):</strong>
+                        <ul>
+                            <li>Weight gain (actual metabolic effect)</li>
+                            <li>Reversible bone density loss with prolonged use — counsel about calcium/Vitamin D</li>
+                            <li>Delayed return to fertility: 9–12 months (sometimes up to 2 years)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ideal for:</strong>
+                        <ul>
+                            <li>Epilepsy — raises seizure threshold; compatible with anti-epileptics</li>
+                            <li>Sickle Cell Disease — reduces sickling crises</li>
+                        </ul>
+                    </li>
+                    <li><span style="color: var(--rose); font-weight: 600;">Avoid</span> if patient plans pregnancy soon — delayed fertility return.</li>
+                </ul>
+            </div>
+
+            <div class="card accent-green">
+                <h3>🌙 Progestin-Only Pill (POP / Mini-Pill)</h3>
+                <ul>
+                    <li><strong>Mechanism:</strong> Thickens cervical mucus (primary), may inhibit ovulation at higher doses.</li>
+                    <li><strong>Key use:</strong> Breastfeeding mothers &lt;6 months postpartum — does not suppress lactation.</li>
+                    <li><strong>Also safe in:</strong> Migraine with aura, DVT/PE history, smokers &gt;35.</li>
+                    <li><strong>Caution:</strong> Must be taken at same time daily (3-hour window for traditional POP).</li>
+                    <li><strong>Bariatric surgery:</strong> Consider alternative — malabsorption may reduce efficacy.</li>
+                </ul>
+            </div>
+
+            <div class="card accent-rose">
+                <h3>🛡️ Barrier Methods</h3>
+                <ul>
+                    <li><strong>Male Condom:</strong> The <strong>only</strong> method that also protects against STIs and HIV. Always counsel dual protection.</li>
+                    <li><strong>Female Condom:</strong> Polyurethane; also STI protective. Can be inserted hours before intercourse.</li>
+                    <li><strong>Diaphragm:</strong> Must be used with spermicide. Leave in situ for ≥6 hours post-coitus. Risk: recurrent UTI, TSS (rare).</li>
+                    <li><strong>Cervical Cap:</strong> Less effective in parous women.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: CLINICAL SCENARIOS -->
+    <!-- ============================================================ -->
+    <section id="scenarios">
+        <div class="section-label">
+            <div class="icon-pill purple">🩺</div>
+            <h2>Clinical Scenarios — Best Method</h2>
+        </div>
+        <p class="section-intro">High-yield exam format: given a patient profile, identify the method of choice and what to avoid.</p>
+
+        <div class="table-overflow">
+            <div class="table-shell">
+                <table>
+                    <thead><tr>
+                        <th style="width:28%">Patient Scenario</th>
+                        <th style="width:30%">Best Method of Choice</th>
+                        <th>Reasoning &amp; Contraindications</th>
+                    </tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Newly Married / Nulliparous</strong><br>Wants to delay first child.</td>
+                            <td class="scenario-best">COCPs</td>
+                            <td>Rapid return to fertility after stopping. Regulates cycle. Good non-contraceptive profile.<br>
+                                <span class="scenario-avoid">⚠ Avoid DMPA:</span> Delayed return to fertility up to 12 months.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Breastfeeding Mother</strong><br>&lt; 6 months postpartum.</td>
+                            <td class="scenario-best">POP (Mini-Pill) / Copper IUD / Implant</td>
+                            <td>Progestin-only and non-hormonal methods do not suppress lactation.<br>
+                                <span class="scenario-avoid">⚠ Contraindicated: Estrogen (COCPs)</span> — suppresses breast milk production.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Completed Family Size</strong><br>Wants permanent solution.</td>
+                            <td class="scenario-best">Vasectomy (Male) or Tubal Ligation</td>
+                            <td>Vasectomy is safer, cheaper, and more effective than tubal ligation.<br>
+                                <span class="mech-note">Vasectomy is NOT immediate — requires backup for 3 months / 20 ejaculations until azoospermia confirmed.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Menorrhagia / Heavy Periods</strong><br>or Dysmenorrhoea.</td>
+                            <td class="scenario-best">Levonorgestrel IUS (Mirena)</td>
+                            <td>Thins endometrium → dramatically reduces blood loss. First-line for menorrhagia (also treats iron deficiency anaemia).<br>
+                                <span class="scenario-avoid">⚠ Avoid Copper IUD:</span> Worsens heavy/painful periods.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Smoker ≥ 35 Years Old</strong></td>
+                            <td class="scenario-best">Copper IUD / Mirena / POP / Implant</td>
+                            <td><span class="scenario-avoid">⚠ Absolute Contraindication: Estrogen-containing methods (COCP, Patch, Ring)</span> — high combined risk of DVT, Stroke, and MI.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Migraine WITH Aura</strong></td>
+                            <td class="scenario-best">Copper IUD / POP / Implant</td>
+                            <td><span class="scenario-avoid">⚠ Absolute Contraindication: All estrogen-containing methods.</span><br>
+                                Aura is an independent stroke risk factor; estrogen compounds this risk substantially.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Acne / PCOS / Hirsutism</strong></td>
+                            <td class="scenario-best">COCPs — especially Diane-35 (Cyproterone Acetate)</td>
+                            <td>Estrogen raises SHBG → reduces free androgens → improves acne and hirsutism. Also regulates PCOS cycles.<br>
+                                <span class="mech-note">Mechanism: ↑ SHBG → ↓ free testosterone → ↓ sebum → ↓ acne.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Epilepsy</strong></td>
+                            <td class="scenario-best">DMPA Injection (Depo-Provera)</td>
+                            <td>Raises seizure threshold. Safe with anti-epileptics.<br>
+                                <span class="scenario-avoid">⚠ Caution with COCPs:</span> Enzyme-inducing anti-epileptics (phenytoin, carbamazepine) reduce pill efficacy.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sickle Cell Anaemia</strong></td>
+                            <td class="scenario-best">DMPA Injection</td>
+                            <td>Reduces sickling crises. Progestins are safe in SCD. Also reduces menstrual blood loss (reducing sickling trigger of menorrhagia).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>History of DVT / PE</strong></td>
+                            <td class="scenario-best">Copper IUD / POP / Implant</td>
+                            <td><span class="scenario-avoid">⚠ Absolute Contraindication: All estrogen-containing methods.</span><br>
+                                Progestin-only and non-hormonal methods are safe.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>History of Ectopic Pregnancy</strong></td>
+                            <td class="scenario-best">COCPs (prevent ovulation entirely)</td>
+                            <td>COCPs offer best protection by eliminating ovulation.<br>
+                                <span class="mech-note">Note: IUDs/POPs don't cause ectopics per se, but if method fails, ectopic is more likely. WHO: IUD benefits still outweigh risks.</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Unprotected Sex &lt; 120 hrs ago</strong><br>(Emergency)</td>
+                            <td class="scenario-best">1st: Copper IUD (99.9%)<br>2nd: Ulipristal (Ella)<br>3rd: Levonorgestrel (Plan B)</td>
+                            <td>Copper IUD most effective and provides ongoing contraception.<br>
+                                LNG pills most effective if taken within 72 hrs. Efficacy ↓ with higher BMI for oral EC.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: CONTRAINDICATIONS -->
+    <!-- ============================================================ -->
+    <section id="safety">
+        <div class="section-label">
+            <div class="icon-pill rose">⛔</div>
+            <h2>WHO Medical Eligibility — Absolute Contraindications</h2>
+        </div>
+        <p class="section-intro">Category 4 conditions represent unacceptable health risks where the method <strong>must not be used</strong>. Memorise these — they are heavily tested.</p>
+
+        <div class="contra-two">
+            <div class="contra-block">
+                <h4>Estrogen-Containing Methods</h4>
+                <div class="method-tags">
+                    <span class="badge blue">COCP</span>
+                    <span class="badge blue">Patch</span>
+                    <span class="badge blue">Vaginal Ring</span>
+                </div>
+                <ul>
+                    <li><strong>Migraine WITH Aura</strong> — Stroke risk (independent risk factor).</li>
+                    <li><strong>History of DVT / PE</strong> or known thrombogenic mutation (Factor V Leiden, etc.).</li>
+                    <li><strong>Uncontrolled Hypertension</strong> ≥160/100 mmHg.</li>
+                    <li><strong>Smoker ≥ 35 years</strong> (≥15 cigarettes/day).</li>
+                    <li><strong>Current or Recent Breast Cancer.</strong></li>
+                    <li><strong>Postpartum &lt; 21 days</strong> (VTE risk heightened).</li>
+                    <li><strong>Breastfeeding &lt; 6 weeks postpartum</strong> (suppresses lactation).</li>
+                    <li><strong>Liver disease:</strong> Severe cirrhosis, hepatic adenoma, acute viral hepatitis.</li>
+                    <li><strong>Structural heart disease</strong> with risk of atrial fibrillation / valvular disease.</li>
+                </ul>
+            </div>
+
+            <div class="contra-block">
+                <h4>Intrauterine Devices (IUDs)</h4>
+                <div class="method-tags">
+                    <span class="badge best">Copper IUD</span>
+                    <span class="badge best">Mirena IUS</span>
+                </div>
+                <ul>
+                    <li><strong>Known or suspected pregnancy.</strong></li>
+                    <li><strong>Unexplained vaginal bleeding</strong> (until malignancy excluded).</li>
+                    <li><strong>Active pelvic infection:</strong> PID, gonorrhoea/chlamydia cervicitis, puerperal sepsis.</li>
+                    <li><strong>Anatomic distortion</strong> of uterine cavity (fibroids, congenital anomaly).</li>
+                    <li><strong>Gestational trophoblastic disease</strong> with persistently elevated βhCG.</li>
+                    <li><em>Wilson's Disease (Copper IUD specifically)</em> — risk of copper accumulation.</li>
+                </ul>
+            </div>
+
+            <div class="contra-block">
+                <h4>Progestin-Only Methods</h4>
+                <div class="method-tags">
+                    <span class="badge warn">DMPA</span>
+                    <span class="badge warn">POP</span>
+                    <span class="badge best">Implant</span>
+                </div>
+                <ul>
+                    <li><strong>Current Breast Cancer</strong> (all progestin-containing methods).</li>
+                    <li><strong>History of bariatric surgery</strong> (malabsorption — for oral POP specifically; injectable/implant unaffected).</li>
+                    <li><strong>DMPA-specific:</strong> Unexplained vaginal bleeding (until cause identified); known or suspected pregnancy.</li>
+                </ul>
+                <div class="pearl amber" style="margin-top: 14px; margin-bottom: 0;">
+                    <strong>Exam Pearl</strong>
+                    Progestin-only methods are generally SAFE where estrogen is contraindicated — migraine with aura, DVT/PE history, smoker &gt;35, breastfeeding.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: EMERGENCY CONTRACEPTION -->
+    <!-- ============================================================ -->
+    <section id="emergency">
+        <div class="section-label">
+            <div class="icon-pill amber">🚨</div>
+            <h2>Emergency Contraception</h2>
+        </div>
+        <p class="section-intro">Prevents pregnancy after unprotected intercourse. <strong>Does not terminate an established pregnancy</strong> — ineffective once implantation has occurred. Prescribe within windows below.</p>
+
+        <div class="table-overflow">
+            <div class="table-shell">
+                <table>
+                    <thead><tr>
+                        <th>Method</th>
+                        <th>Window</th>
+                        <th>Efficacy</th>
+                        <th>BMI Consideration</th>
+                        <th>Key Notes</th>
+                    </tr></thead>
+                    <tbody>
+                        <tr class="ec-1">
+                            <td><strong>1. Copper IUD</strong></td>
+                            <td>≤ 5 days (120 hrs)</td>
+                            <td><span class="badge best">99.9%</span></td>
+                            <td><span class="badge best">Not Affected</span></td>
+                            <td>Most effective option. Provides ongoing long-term contraception. Method of choice in high BMI.</td>
+                        </tr>
+                        <tr class="ec-2">
+                            <td><strong>2. Ulipristal Acetate (EllaOne / Ella)</strong></td>
+                            <td>≤ 5 days (120 hrs)</td>
+                            <td><span class="badge best">High</span></td>
+                            <td><span class="badge warn">Less effective BMI &gt;30</span></td>
+                            <td>Prescription only. Selective progesterone receptor modulator. <br><strong>Wait 5 days before starting hormonal contraception</strong> (risk of interaction).</td>
+                        </tr>
+                        <tr class="ec-3">
+                            <td><strong>3. Levonorgestrel (Plan B / Postinor)</strong></td>
+                            <td>≤ 3 days (72 hrs)</td>
+                            <td><span class="badge warn">Moderate</span></td>
+                            <td><span class="badge stop">Less effective BMI ≥25</span></td>
+                            <td>OTC. Works best within 72 hrs, but licensed up to 120 hrs. <br><strong>Start ongoing hormonal BC immediately</strong> (no waiting period).</td>
+                        </tr>
+                        <tr class="ec-4">
+                            <td><strong>4. Yuzpe Method</strong></td>
+                            <td>≤ 3–5 days</td>
+                            <td><span class="badge stop">Low</span></td>
+                            <td>—</td>
+                            <td>High-dose combined COCPs as EC (last resort). Severe nausea — <strong>prescribe antiemetic</strong>. Only use when no other option available.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card-grid" style="margin-top:16px;">
+            <div class="pearl teal">
+                <strong>Quick Start Protocol</strong>
+                If pregnancy is reasonably excluded, start ongoing contraception <strong>immediately</strong> — do not wait for the next menstrual period. Use backup method (condoms) for 7 days.
+            </div>
+            <div class="pearl amber">
+                <strong>⚠ Ulipristal Interaction</strong>
+                Ulipristal and hormonal contraceptives compete at the progesterone receptor. Wait 5 days after taking ulipristal before starting a hormonal method. Use condoms in the interim.
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 7: STERILIZATION -->
+    <!-- ============================================================ -->
+    <section id="sterilization">
+        <div class="section-label">
+            <div class="icon-pill dark">✂️</div>
+            <h2>Sterilization (Permanent)</h2>
+        </div>
+        <p class="section-intro">For individuals and couples who have completed family size and desire a permanent, irreversible solution.</p>
+
+        <div class="card-grid">
+            <div class="card accent-teal">
+                <h3>♀ Female Sterilization</h3>
+                <ul>
+                    <li><strong>Gold Standard Technique:</strong> Salpingectomy (bilateral tube removal) — preferred over tubal ligation/clips.</li>
+                    <li><strong>Bonus benefit:</strong> Salpingectomy reduces ovarian cancer risk (most ovarian cancers originate in the fimbriae).</li>
+                    <li><strong>Immediate efficacy</strong> post-procedure.</li>
+                    <li><strong>Risks:</strong> Surgical complications (anaesthesia, haemorrhage). If rare method failure occurs, ectopic pregnancy risk is increased — patient must know symptoms.</li>
+                </ul>
+            </div>
+            <div class="card accent-green">
+                <h3>♂ Male Sterilization (Vasectomy)</h3>
+                <ul>
+                    <li><strong>Safer, cheaper, and more effective</strong> than female sterilization. Performed under local anaesthesia as an outpatient.</li>
+                    <li><span class="badge stop">Critical</span> <strong>NOT immediately effective.</strong> Sperm persist in the reproductive tract post-procedure.</li>
+                    <li><strong>Backup contraception required</strong> for 3 months / 20 ejaculations.</li>
+                    <li><strong>Confirmation:</strong> Semen analysis to confirm azoospermia before stopping backup method.</li>
+                    <li>Should be considered permanent — reversal success rates decline over time.</li>
+                </ul>
+                <div class="pearl green" style="margin-top: 14px; margin-bottom: 0;">
+                    <strong>Exam Trap: Vasectomy is NOT immediate</strong>
+                    If asked "what backup is needed after vasectomy?" — Answer: condoms for 3 months / 20 ejaculations until azoospermia confirmed on semen analysis.
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
